@@ -1,0 +1,57 @@
+.example{
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+    color: #222;
+}
+h1 {
+    text-align: center;
+    color: #2e2e2e;
+}
+p {
+    text-align: center;
+}
+.card {
+    background: white;
+    margin: 15px auto;
+    padding: 20px;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.card h3 {
+    margin-top: 0;
+    color: #222222;
+}
+input {
+    padding: 8px;
+    margin: 5px 0;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+button {
+    padding: 8px 12px;
+    margin: 5px 0;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover {
+    background: #0a74da;
+}
+.resultado {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}

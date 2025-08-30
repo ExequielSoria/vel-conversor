@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
+
+  <title>Racionalizacion de denominadores</title>
+  
+<!-- aca cargo MathJax para que renderice LaTeX -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<section class ="example">
+
+  <h2>Racionalizacion de denominadores</h2>
+
+  <p>
+    Supongamos que un objeto recorre dos tramos iguales con velocidades distintas:
+    \( v_1 = 3 \, \text{m/s} \) y \( v_2 = \sqrt{2} \, \text{m/s} \).
+  </p>
+  <p>
+    La fórmula de la velocidad media en este caso es:
+  </p>
+  <p style="text-align:center;">
+    \[
+    v_{med} = \frac{2}{\tfrac{1}{v_1} + \tfrac{1}{v_2}}
+    \]
+  </p>
+  <p>
+    Reemplazando los valores:
+  </p>
+  <p style="text-align:center;">
+    \[
+    v_{med} = \frac{2}{\tfrac{1}{3} + \tfrac{1}{\sqrt{2}}}
+    \]
+  </p>
+  <p>
+    Esto nos da un denominador con raíz. Simplificamos:
+  </p>
+  <p style="text-align:center;">
+    \[
+    v_{med} = \frac{6\sqrt{2}}{3 + \sqrt{2}}
+    \]
+  </p>
+  <p>
+    Para eliminar la raíz del denominador, racionalizamos multiplicando por el conjugado:
+  </p>
+  <p style="text-align:center;">
+    \[
+    v_{med} = \frac{6\sqrt{2}}{3 + \sqrt{2}} \cdot \frac{3 - \sqrt{2}}{3 - \sqrt{2}}
+    \]
+  </p>
+  <p style="text-align:center;">
+    \[
+    v_{med} = \frac{18\sqrt{2} - 12}{7}
+    \]
+  </p>
+  <p>
+    ✔ Así queda expresado como una combinación de un número racional y uno irracional,
+    evitando la raíz en el denominador.
+  </p>
+</section>
+
+</head>
+
+<body>
+
+  <section class="example">
+  <br>
+
+  <h2>Ejemplo practico de Calculadora de Racionalización</h2>
+  <p>Ingresá una fracción con raíz en el denominador (ej: <code>4/√3</code>):</p>
+
+  <input type="text" id="expresion" value="4/√3">
+  <button onclick="racionalizar()">Calcular</button>
+
+  <div id="proceso" style="margin-top:20px; font-size: 18px;"></div>
+
+  <br>
+
+  </section>
+
+
+  <h1>Conversores de Velocidad</h1>
+  <p>Ejemplos prácticos con racionalización de denominadores</p>
+
+  <!-- 1. Unidades clásicas -->
+  <div class="card">
+    <h3>1) Metros/segundo → Km/h</h3>
+    <input id="ms" type="number" placeholder="m/s">
+    <button onclick="msToKm()">Convertir</button>
+    <p id="res1" class="resultado"></p>
+  </div>
+
+  <!-- 2. Distancia y tiempo -->
+  <div class="card">
+    <h3>2) Distancia / Tiempo</h3>
+    <input id="dist" type="number" placeholder="Distancia (m)">
+    <input id="tiempo" type="number" step="any" placeholder="Tiempo (s)">
+    <button onclick="dTov()">Calcular</button>
+    <p id="res2" class="resultado"></p>
+  </div>
+
+  <!-- 3. Promedio en tramos iguales -->
+  <div class="card">
+    <h3>3) Velocidad media (2 tramos iguales)</h3>
+    <input id="v1" type="number" step="any" placeholder="v1 (m/s)">
+    <input id="v2" type="number" step="any" placeholder="v2 (m/s)">
+    <button onclick="mediaArmonica()">Calcular</button>
+    <p id="res3" class="resultado"></p>
+  </div>
+
+  <!-- 4 Angular a lineal -->
+  <div class="card">
+    <h3>4) Angular (ω) y Radio (R) → Lineal</h3>
+    <input id="omega" type="number" step="any" placeholder="ω (rad/s)">
+    <input id="radio" type="number" step="any" placeholder="R (m)">
+    <button onclick="angularLineal()">Calcular</button>
+    <p id="res5" class="resultado"></p>
+  </div>
+
+
+</body>
+</html>
